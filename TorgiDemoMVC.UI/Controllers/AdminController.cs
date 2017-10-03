@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Domain.Abstract;
@@ -56,7 +57,7 @@ namespace TorgiDemoMVC.UI.Controllers
             }
             else
             {
-                return View(product);
+                return View("Index");
             }
         }
 
@@ -111,7 +112,6 @@ namespace TorgiDemoMVC.UI.Controllers
                 EmailController controller = new EmailController();
                 controller.SendMail(model, users).Deliver();
             }
-            
         }
     }
 
