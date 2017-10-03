@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TorgiDemoMVC.UI", "TorgiDemoMVC.UI\TorgiDemoMVC.UI.csproj", "{55069FE3-EA4B-4D5A-9BE6-D066ACB29AF2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{EB04EF9D-C8E5-458D-8A51-0F6CF2596E7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{55069FE3-EA4B-4D5A-9BE6-D066ACB29AF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55069FE3-EA4B-4D5A-9BE6-D066ACB29AF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55069FE3-EA4B-4D5A-9BE6-D066ACB29AF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB04EF9D-C8E5-458D-8A51-0F6CF2596E7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB04EF9D-C8E5-458D-8A51-0F6CF2596E7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB04EF9D-C8E5-458D-8A51-0F6CF2596E7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB04EF9D-C8E5-458D-8A51-0F6CF2596E7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

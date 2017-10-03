@@ -1,0 +1,58 @@
+﻿@model Domain.Entitis.User
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Sait.css" rel="stylesheet" />
+    <title></title>
+</head>
+<body>
+<div>
+    @if (TempData["message"] != null)
+    {
+        <div>@TempData["message"]</div>
+    }
+</div>
+<div>
+    @Html.ActionLink("Products", "Index", "Admin") |
+    @Html.ActionLink("Users", "Index", "User")
+</div>
+<form class="myForm">
+    @using (Html.BeginForm("AddUser", "Main", FormMethod.Post, new {@role = "form"}))
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            <label>Email:</label>
+            @Html.TextBoxFor(u => u.Email, new {@type = "email", @placeholder = "Enter email" })
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                @Html.CheckBoxFor(u => u.Cars, new {@class = "form-check-input"})
+                Авто
+            </label>
+            <br/>
+            <label class="form-check-label">
+                @Html.CheckBoxFor(u => u.Telephones, new { @class = "form-check-input" })
+                Телефоны
+            </label>
+            <br />
+            <label class="form-check-label">
+                @Html.CheckBoxFor(u => u.Realty, new { @class = "form-check-input" })
+                Недвижимость
+            </label>
+            <br />
+            <label class="form-check-label">
+                @Html.CheckBoxFor(u => u.Jewelry, new { @class = "form-check-input" })
+                Драгоценности
+            </label>
+            <br />
+          </div>
+        <div class="form-group-lg">
+            <button type="submit" class="btn btn-primary">Save</button>
+            @Html.ActionLink("Cancel", "Index")
+        </div>
+    }
+    </form>
+</body>
+</html>
+

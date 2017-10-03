@@ -13,6 +13,7 @@ namespace TorgiDemoMVC.UI
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
         }
     }
 }

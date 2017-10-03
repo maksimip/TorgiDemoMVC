@@ -1,0 +1,33 @@
+﻿@using Domain.Entitis
+@model IEnumerable<User>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Users</h2>
+
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Email)</th>
+        <th>@Html.DisplayNameFor(model => model.Cars)</th>
+        <th>@Html.DisplayNameFor(model => model.Jewelry)</th>
+        <th>@Html.DisplayNameFor(model => model.Realty)</th>
+        <th>@Html.DisplayNameFor(model => model.Telephones)</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.Email)</td>
+            <td>@Html.CheckBoxFor(modelItem => item.Cars)</td>
+            <td>@Html.CheckBoxFor(modelItem => item.Jewelry)</td>
+            <td>@Html.CheckBoxFor(modelItem => item.Realty)</td>
+            <td>@Html.CheckBoxFor(modelItem => item.Telephones)</td>
+            <td>
+                @Html.ActionLink("Edit", "EditUser", new {id = item.Id}) |
+                @Html.ActionLink("Delete", "DeleteUser", new { id = item.Id })
+            </td>
+        </tr>
+    }
+</table>
+

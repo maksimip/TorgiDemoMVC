@@ -1,0 +1,30 @@
+﻿@using Domain.Entitis
+@model IEnumerable<Product>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Repository</h2>
+<p>
+    @Html.ActionLink("Create new product", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Name)</th>
+        <th>@Html.DisplayNameFor(model => model.Category)</th>
+        <th>@Html.DisplayNameFor(model => model.Price)</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.Name)</td>
+            <td>@Html.DisplayFor(momodelItemdel => item.Category)</td>
+            <td>@Html.DisplayFor(modelItem => item.Price)</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {id = item.IdItem}) |
+                @Html.ActionLink("Delete", "Delete", new{id = item.IdItem})
+            </td>
+        </tr>
+    }
+</table>
