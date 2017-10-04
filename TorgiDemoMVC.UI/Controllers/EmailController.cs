@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using ActionMailer.Net.Mvc;
@@ -10,6 +11,9 @@ using TorgiDemoMVC.UI.Models;
 
 namespace TorgiDemoMVC.UI.Controllers
 {
+    /// <summary>
+    /// контроллер для отправки сообщений (сообщения сохраняються на локальном диске)
+    /// </summary>
     public class EmailController : MailerBase
     {
         public EmailResult SendMail(EmailModel model, IEnumerable<User> users)

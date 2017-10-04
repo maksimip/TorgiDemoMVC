@@ -8,6 +8,9 @@ using Domain.Entitis;
 
 namespace TorgiDemoMVC.UI.Controllers
 {
+    /// <summary>
+    /// контроллер для работы с объектами класса 'User'
+    /// </summary>
     public class UserController : Controller
     {
         private IUserRepository _repository;

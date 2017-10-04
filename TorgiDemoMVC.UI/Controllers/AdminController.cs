@@ -12,6 +12,9 @@ using TorgiDemoMVC.UI.Models;
 
 namespace TorgiDemoMVC.UI.Controllers
 {
+    /// <summary>
+    /// контроллер для работы с объектом класса 'Product'
+    /// </summary>
     public class AdminController : Controller
     {
         private IProductsRepository _repository;
@@ -79,6 +82,7 @@ namespace TorgiDemoMVC.UI.Controllers
             return RedirectToAction("Index");
         }
 
+        //метод, формирующий список пользователей и текст сообщения для рассылки
         public void SendToEmail(Product product, string action)
         {
             IEnumerable<User> users;
